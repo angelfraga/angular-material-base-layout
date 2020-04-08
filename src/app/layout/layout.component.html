@@ -1,6 +1,7 @@
 <mat-toolbar *ngIf="header"
              #matToolBarHeader
-             [color]="header.color">
+             [color]="header.color"
+             class="mat-toolbar-header">
   <ng-container *ngTemplateOutlet="header.templateRef;  context: context">
   </ng-container>
 </mat-toolbar>
@@ -8,7 +9,8 @@
   <mat-sidenav *ngIf="sidenavLeft"
                #matSidenavLeft
                [opened]="sidenavLeft?.sidenavConfig?.opened"
-               [mode]="sidenavLeft?.sidenavConfig?.mode">
+               [mode]="sidenavLeft?.sidenavConfig?.mode"
+               class="mat-sidenav-left">
     <ng-container *ngTemplateOutlet="sidenavLeft.templateRef;  context: context">
     </ng-container>
   </mat-sidenav>
@@ -16,7 +18,8 @@
                #matSidenavRight
                [opened]="sidenavRight?.sidenavConfig?.opened"
                [mode]="sidenavRight?.sidenavConfig?.mode"
-               position="end">
+               position="end"
+               class="mat-sidenav-right">
     <ng-container *ngTemplateOutlet="sidenavRight.templateRef;  context: context">
     </ng-container>
   </mat-sidenav>
@@ -28,7 +31,8 @@
 </mat-sidenav-container>
 <mat-toolbar *ngIf="footer"
              #matToolBarFooter
-             [color]="footer.color">
+             [color]="footer.color"
+             class="mat-toolbar-footer">
   <ng-container *ngTemplateOutlet="footer.templateRef;  context: context">
   </ng-container>
 </mat-toolbar>
