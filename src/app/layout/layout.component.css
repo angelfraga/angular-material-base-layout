@@ -1,0 +1,13 @@
+app-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+app-layout > mat-toolbar.mat-toolbar {
+  height: 48px;
+}
+
+app-layout > mat-sidenav-container.mat-sidenav-container  {
+  flex: 1;
+}

@@ -1,0 +1,58 @@
+<app-layout>
+  <ng-template app-layout-header color="primary">
+    header
+  </ng-template>
+  <ng-template app-layout-sidenav-left [sidenavConfig]="{opened: true, mode: 'over'}">
+    left
+  </ng-template>
+  <ng-template app-layout-sidenav-right [sidenavConfig]="{opened: true, mode: 'side'}">
+    right
+  </ng-template>
+  <ng-template app-layout-content>
+    <ng-container *ngTemplateOutlet="content2"></ng-container>
+  </ng-template>
+  <ng-template app-layout-footer color="primary">
+    footer
+  </ng-template>
+</app-layout>
+
+
+<ng-template #content2>
+  <app-layout>
+  <ng-template app-layout-header color="warn">
+    header 2
+  </ng-template>
+  <ng-template app-layout-sidenav-left [sidenavConfig]="{opened: true, mode: 'side'}">
+    left 2
+  </ng-template>
+  <ng-template app-layout-sidenav-right [sidenavConfig]="{opened: true, mode: 'side'}">
+    right 2
+  </ng-template>
+  <ng-template app-layout-content>
+    <ng-container *ngTemplateOutlet="content3"></ng-container>
+  </ng-template>
+  <ng-template app-layout-footer color="warn">
+    footer 2
+  </ng-template>
+</app-layout>
+</ng-template>
+
+<ng-template #content3>
+  <app-layout>
+  <ng-template app-layout-header color="accent">
+    header 3
+  </ng-template>
+  <ng-template app-layout-sidenav-left [sidenavConfig]="{opened: true, mode: 'side'}">
+    left 3
+  </ng-template>
+  <ng-template app-layout-sidenav-right [sidenavConfig]="{opened: true, mode: 'side'}">
+    right 3
+  </ng-template>
+  <ng-template app-layout-content>
+    content 3
+  </ng-template>
+  <ng-template app-layout-footer color="accent">
+    footer 3
+  </ng-template>
+</app-layout>
+</ng-template>
